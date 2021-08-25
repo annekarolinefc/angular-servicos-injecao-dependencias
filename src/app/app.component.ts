@@ -1,3 +1,4 @@
+import { TodoListService } from './todoList.services';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  //Importando o serviço
+  todoListService: TodoListService = new TodoListService;
+  construtor(todoListService: TodoListService){
+    this.todoListService = todoListService;
+  }
   title = 'servicos';
 }
